@@ -1,0 +1,41 @@
+#game-canvas{
+    // background-image: 'src\imgs\artemisimg.jpg';
+    // background-size: cover;
+    // background-repeat: no-repeat;
+    // background-position: center, center;
+    display: flex;
+    padding: 4px;
+    margin-bottom: 10px;
+}
+
+.butts{
+    width: 60%;
+    margin-left: 34%;
+}
+button {
+    border-width: 10px;
+    border-radius: 4px;
+    padding: 5px;
+    border-style: ridge;
+}
+
+#plant {
+    background-color:rgb(128, 187, 128);
+    border-color: green;
+    
+}
+
+#water{
+    background-color: aqua;
+    border-color: navy;
+}
+
+#sunshine{
+    background-color: yellow;
+    border-color: orange;
+}
+
+button:hover{
+    background-color: rgb(85, 79, 79);
+    opacity: 0.3;
+}

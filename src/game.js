@@ -1,7 +1,7 @@
 const Plant = require("./plant")
 // const Rain = require("./rain")
 function Game(){
-    debugger
+    // debugger
     this.plants = [];
     this.canvas_width = 500;
     this.canvas_height = 500;
@@ -23,7 +23,7 @@ Game.prototype.add = function add(object){
 }
 
 Game.prototype.addPlant = function addPlant(ctx){
-    debugger;
+    // debugger;
     newcolor = this.randCol();    
     const planty = new Plant({pos:[Math.random()* (400 - 5) + 5, 500],
         color:'#008000',
@@ -36,7 +36,6 @@ Game.prototype.addPlant = function addPlant(ctx){
         bloomColor: newcolor, 
         ctx:ctx
     })
-    debugger;
     this.add(planty)
     planty.plantit()
     return planty
@@ -66,10 +65,10 @@ Game.prototype.randCol = function randCol() {
 //     this.canvas.height = 500;
 
 Game.prototype.sunny = function sunny(){
-    debugger
+    
     this.plants.forEach(function(object){
-        debugger
-        object.sunit();
+        // debugger
+        object.sunit(1);
         if (object.sun/4 > 5 && object.water/4 > 3){
             object.grow()
         }
@@ -78,10 +77,14 @@ Game.prototype.sunny = function sunny(){
 
 Game.prototype.watery = function watery(){
     this.plants.forEach(function(object){
-        object.waterit();
+        object.waterit(2);
     })
 }
-
+// Game.prototype.withering = function withering(){
+//     this.plants.forEach(function(object){
+//         object.wither(2);
+//     })
+// }
 
 Game.prototype.draw = function draw(){
     this.context.clearRect(0, 0,this.canvas_width , this.canvas.height);

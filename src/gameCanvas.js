@@ -8,16 +8,16 @@ GameCanvas.prototype.start = function start(){
     this.bindbuttons();
     debugger
     this.game.addPlant(this.ctx)
+    // this.plantnew = this.plantnew.bind(this)
     // this.lastTime = 0;
     // requestAnimationFrame(this.animate.bind(this));
 }
 
 GameCanvas.prototype.bindbuttons = function bindbuttons(){
     debugger
-    document.getElementById("plant").addEventListener("click", this.plantnew);
-    document.getElementById("water").addEventListener("click",  this.rained);
-    // document.getElementById("water").onclick = event => this.rained;
-    // document.getElementById("sun").onclick = event => this.sunned;
+    document.getElementById("plant").addEventListener("click", this.plantnew.bind(this));
+    document.getElementById("water").addEventListener("click",  this.rained.bind(this));
+    document.getElementById("sunshine").addEventListener("click",  this.sunned.bind(this));
 }
 
 GameCanvas.prototype.plantnew = function plantnew(){
@@ -30,7 +30,7 @@ GameCanvas.prototype.sunned= function sunned(){
     this.game.sunny()
 }
 GameCanvas.prototype.rained= function rained(){
-    debugger
+    
     this.game.watery()   
 }
 

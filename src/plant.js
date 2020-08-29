@@ -24,11 +24,15 @@ Plant.prototype.plantit = function plantit(){
 }
 
 Plant.prototype.grow = function grow(){
+    if (this.sun <= 15 && this.water >= 2){
+    this.color = '#008000'
     this.height -=7
-        if (this.sun > 15 && this.water > 13){
+        if (this.height < -75){
             this.bloom()
         }
-        if (this.sun > 15 && this.water < 6){
+    }
+        if (this.sun > 15 && this.water < 2){
+            debugger
             this.wither()
         }
     this.updatePls()
@@ -37,11 +41,11 @@ Plant.prototype.grow = function grow(){
 
 Plant.prototype.wither = function wither(){
     this.height +=7
+    this.color = "#CD853F"
     this.updatePls()
 }
 
 Plant.prototype.updatePls = function updatePls(){
-    debugger
     this.ctx.clearRect(0, 0, 500, 500);
     this.ctx.fillStyle = this.color;
     this.ctx.fillRect(this.pos[0], this.pos[1], this.width, this.height)
@@ -57,20 +61,24 @@ Plant.prototype.remove = function remove(){
 }
 
 Plant.prototype.sunit = function sunit(amount){
+    debugger
     this.sun +=amount;
     this.water -= 2;
-    if (this.sun/4 > 5 && this.water/4 > 3){
+    if (this.sun > 3 && this.water/2 > 3){
         this.grow()
     }
 
 }
 Plant.prototype.waterit = function waterit(amount){
+    debugger
     this.water +=amount;
-    if (this.sun/4 > 5 && this.water/4 > 3){
+    debugger
+    if (this.sun > 3 && this.water/2 > 3){
         this.grow()
     }
 }
 Plant.prototype.bloom = function bloom(){
+    debugger
     this.bloomed = true;
 }
 

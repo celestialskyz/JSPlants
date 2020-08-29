@@ -1,5 +1,6 @@
 // import "./styles/index.scss";
 // import Plant from "./plant";
+import "./styles/index.scss";
 import Game from "./game"
 import gameCanvas from "./gameCanvas";
 window.addEventListener("DOMContentLoaded", () => {
