@@ -18,7 +18,7 @@ function Plant(options){
 }
 
 Plant.prototype.plantit = function plantit(){
-    debugger
+    // debugger
     this.ctx.fillStyle = this.color;
     this.ctx.fillRect(this.pos[0], this.pos[1], this.width, this.height)
 }
@@ -35,6 +35,7 @@ Plant.prototype.grow = function grow(){
             debugger
             this.wither()
         }
+        debugger
     this.updatePls()
 
 }
@@ -46,7 +47,7 @@ Plant.prototype.wither = function wither(){
 }
 
 Plant.prototype.updatePls = function updatePls(){
-    this.ctx.clearRect(0, 0, 500, 500);
+    // this.ctx.clearRect(0, 0, 500, 500);
     this.ctx.fillStyle = this.color;
     this.ctx.fillRect(this.pos[0], this.pos[1], this.width, this.height)
    
@@ -70,7 +71,7 @@ Plant.prototype.sunit = function sunit(amount){
 
 }
 Plant.prototype.waterit = function waterit(amount){
-    debugger
+    // debugger
     this.water +=amount;
     debugger
     if (this.sun > 3 && this.water/2 > 3){
@@ -78,7 +79,7 @@ Plant.prototype.waterit = function waterit(amount){
     }
 }
 Plant.prototype.bloom = function bloom(){
-    debugger
+    // debugger
     this.bloomed = true;
 }
 

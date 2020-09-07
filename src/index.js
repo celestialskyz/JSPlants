@@ -10,7 +10,7 @@ window.addEventListener("DOMContentLoaded", () => {
     
     const ctx = canvaselt.getContext("2d");
 
-    const game = new Game();
+    const game = new Game(ctx);
     new gameCanvas(game, ctx).start();
 //500* Math.random()
 // const plant1 = new Plant({ pos:[Math.random()* (400 - 5) + 5, 500],

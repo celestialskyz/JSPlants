@@ -14,25 +14,30 @@ GameCanvas.prototype.start = function start(){
 }
 
 GameCanvas.prototype.bindbuttons = function bindbuttons(){
-    debugger
+    // debugger
     document.getElementById("plant").addEventListener("click", this.plantnew.bind(this));
     document.getElementById("water").addEventListener("click",  this.rained.bind(this));
     document.getElementById("sunshine").addEventListener("click",  this.sunned.bind(this));
 }
 
 GameCanvas.prototype.plantnew = function plantnew(){
-    debugger
+    // debugger
     this.game.addPlant(this.ctx)
 }
 
 GameCanvas.prototype.sunned= function sunned(){
-    debugger
+    // debugger
     this.game.sunny()
 }
 GameCanvas.prototype.rained= function rained(){
     
     this.game.watery()   
 }
+
+// GameCanvas.prototype.addWeeds = function addWeeds(){
+//     debugger
+//     this.game.addWeeds(this.ctx)
+// }
 
 // GameCanvas.prototype.animate = function animate(time){
 //     const timechange = time- this.lastTime;
